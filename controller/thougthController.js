@@ -1,7 +1,7 @@
 const { ThoughtModel, UserModel } = require('../models');
 const thoughtController = {
     // get all thoughts
-  async getThoughts(req, res) {
+  async getAllThoughts(req, res) {
     try {
         const thoughtDBData = await ThoughtModel.find()
             .sort({ createdAt: -1 });
